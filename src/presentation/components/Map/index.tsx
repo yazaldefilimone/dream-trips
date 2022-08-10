@@ -2,9 +2,9 @@ import { FunctionComponent } from 'react';
 
 import { MapContainer, Marker, TileLayer } from 'react-leaflet';
 import { LatLngExpression } from 'leaflet';
-import { MapProtocols, Place } from './protocols';
+import { MapContracts, Place } from '~/presentation/components/contracts';
 
-const Map: FunctionComponent<MapProtocols> = ({ places }) => {
+const Map: FunctionComponent<MapContracts> = ({ places }) => {
   const position: LatLngExpression = [51.505, -0.09];
 
   function PlaceMap(place: Place) {
