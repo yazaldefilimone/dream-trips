@@ -10,7 +10,7 @@ export type MapContracts = {
   places?: Array<Place>;
 };
 
-export type LinkContracts = {
+export type LinkAppContracts = {
   href: string;
   children: ReactNode;
 };
