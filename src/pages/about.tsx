@@ -1,7 +1,6 @@
 import { FunctionComponent } from 'react';
+import { AboutTemplete } from '~/presentation/templates/About';
 
-const About: FunctionComponent = () => {
-  return <h1>About</h1>;
-};
+const About: FunctionComponent = () => <AboutTemplete />;
 
 export default About;
