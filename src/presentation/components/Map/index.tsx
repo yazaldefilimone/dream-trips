@@ -1,6 +1,7 @@
-import { LatLngExpression } from 'leaflet';
 import { FunctionComponent } from 'react';
+
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import { LatLngExpression } from 'leaflet';
 
 const Map: FunctionComponent = () => {
   const position: LatLngExpression = [51.505, -0.09];
