@@ -1,21 +1,23 @@
 import { FunctionComponent } from 'react';
 
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import { MapContainer, Marker, TileLayer } from 'react-leaflet';
 import { LatLngExpression } from 'leaflet';
+import { MapProtocols, Place } from './protocols';
 
-const Map: FunctionComponent = () => {
+const Map: FunctionComponent<MapProtocols> = ({ places }) => {
   const position: LatLngExpression = [51.505, -0.09];
+
+  function PlaceMap(place: Place) {
+    return <Marker title={place.name} position={place.location}></Marker>;
+  }
+
   return (
-    <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+    <MapContainer center={position} zoom={3} style={{ height: '100%', width: '100%' }}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={position}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker>
+      {places?.map(PlaceMap)}
     </MapContainer>
   );
 };
