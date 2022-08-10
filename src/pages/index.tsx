@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
-import { HelloFactory } from '~/infra/factories';
+import dynamic from 'next/dynamic';
 
-const Home: NextPage = () => <HelloFactory />;
+const Map = dynamic(() => import('~/presentation/components/Map'), { ssr: false });
+
+const Home: NextPage = () => <Map />;
 
 export default Home;
