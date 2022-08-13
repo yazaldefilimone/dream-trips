@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const AboutTempleteContainer = styled.div`
+export const PageTempleteContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,11 +9,11 @@ export const AboutTempleteContainer = styled.div`
   max-width: var(--container);
   margin: auto;
 `;
-export const AboutTempleteHeading = styled.h1`
+export const PageTempleteHeading = styled.h1`
   font-size: var(--large);
   margin-bottom: var(--large);
 `;
-export const AboutTempleteBody = styled.div`
+export const PageTempleteBody = styled.div`
   P {
     font-size: var(--medium);
     text-align: center;

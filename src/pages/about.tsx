@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
-import { AboutTemplete } from '~/presentation/templates/About';
+import { PageTemplete } from '~/presentation/templates/Page';
 
-const About: FunctionComponent = () => <AboutTemplete />;
+const About: FunctionComponent = () => <PageTemplete />;
 
 export default About;
