@@ -12,8 +12,7 @@ export class RemoteGetPage implements IRemoteGetPage {
     try {
       const { pages } = await client.request<{ pages: Page[] }>(PageQuery, { slug });
       return right(pages[0]);
-    } catch (error: any) {
-      console.log({ message: error.message });
+    } catch (error) {
       return left(new InternalServerError());
     }
   }
