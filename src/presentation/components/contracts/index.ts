@@ -1,12 +1,13 @@
 import { ReactNode } from 'react';
-
+import { Place as PlaceS } from '~/domain/entities';
 export type Place = {
   id: string;
+  slug: string;
   name: string;
   location: Location;
 };
 export type MapContracts = {
-  places?: Array<Place>;
+  places?: Array<PlaceS>;
 };
 
 export type LinkAppContracts = {
