@@ -10,8 +10,8 @@ import { left, right } from '~/shared/error-handler/either';
 export class RemoteGetPage implements IRemoteGetPage {
   async query({ slug }: { slug: string }): IRemoteGetPage.output {
     try {
-      const { pages } = await client.request<{ pages: Page[] }>(PageQuery, { slug });
-      return right(pages[0]);
+      const { page } = await client.request<{ page: Page }>(PageQuery, { slug });
+      return right(page);
     } catch (error) {
       return left(new InternalServerError());
     }
