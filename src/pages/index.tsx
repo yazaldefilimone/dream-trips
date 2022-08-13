@@ -26,7 +26,7 @@ const Home: NextPage = () => {
   return (
     <Fragment>
       <LinkApp href="/about">
-        <InfoOutline size={32} aria-lebal="about" />
+        <InfoOutline size={32} aria-label="about" />
       </LinkApp>
       <Map places={places} />
     </Fragment>

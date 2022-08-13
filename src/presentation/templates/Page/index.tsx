@@ -8,7 +8,7 @@ export const PageTemplete: FunctionComponent = () => {
   return (
     <PageTempleteContainer>
       <LinkApp href="/">
-        <CloseOutline size={32} aria-lebal="close" />
+        <CloseOutline size={32} aria-label="close" />
       </LinkApp>
       <PageTempleteHeading>My Dream Trips</PageTempleteHeading>
       <PageTempleteBody>
