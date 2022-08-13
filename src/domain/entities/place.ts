@@ -4,10 +4,10 @@ export type Place = {
   name: string;
   location: Location;
   description: Description;
-  gallery: Gallery;
+  gallery: Gallery[];
 };
 
-type Gallery = {
+export type Gallery = {
   url: string;
   height: number;
   width: number;
