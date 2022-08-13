@@ -1,4 +1,4 @@
-import { Page } from '~/domain/entities';
+import { Place } from '~/domain/entities';
 import { InternalServerError } from '~/domain/errors';
 import { Either } from '~/shared/error-handler/either';
 
@@ -7,5 +7,5 @@ export interface IRemoteGetPlace {
 }
 
 export namespace IRemoteGetPlace {
-  export type output = Promise<Either<InternalServerError, Page>>;
+  export type output = Promise<Either<InternalServerError, Place>>;
 }
