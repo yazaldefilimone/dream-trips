@@ -1,6 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next';
 import { getPlacesFactory } from '~/infra/factories';
-import { Place } from '~/presentation/components/contracts';
+import { Place } from '~/domain/entities';
 import { HomeTemple } from '~/presentation/templates/Home';
 
 const Home: NextPage<{ places: Place[] }> = ({ places }) => {

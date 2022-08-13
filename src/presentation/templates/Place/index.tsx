@@ -1,6 +1,15 @@
-import { FunctionComponent } from 'react';
+import { CloseOutline } from '@styled-icons/evaicons-outline';
+import { Fragment, FunctionComponent } from 'react';
 import { Gallery, Place } from '~/domain/entities';
-import { PlaceTempleteContainer } from './styles';
+import { LinkApp } from '~/presentation/components';
+import {
+  PlaceTempleteContainer,
+  PlaceTempleteContent,
+  PlaceTempleTitle,
+  PlaceTempleBody,
+  PlaceTempleGallery
+} from './styles';
+
 type PlaceTempleteProps = {
   place: Place;
 };
@@ -9,10 +18,19 @@ export const PlaceTemple: FunctionComponent<PlaceTempleteProps> = ({ place }) =>
     return <img key={`place-${place.id}`} src={gallery.url} alt={place.name} />;
   }
   return (
-    <PlaceTempleteContainer>
-      <h2>{place.name}</h2>
-      <div dangerouslySetInnerHTML={{ __html: place.description.html }} />
-      {place.gallery.map(PlaceImages)}
-    </PlaceTempleteContainer>
+    <Fragment>
+      <LinkApp href="/">
+        <CloseOutline size={32} aria-label="Go back to Map" />
+      </LinkApp>
+      <PlaceTempleteContainer>
+        <PlaceTempleteContent>
+          <PlaceTempleTitle>{place.name}</PlaceTempleTitle>
+          <PlaceTempleBody>
+            <div dangerouslySetInnerHTML={{ __html: place.description.html }} />
+          </PlaceTempleBody>
+          <PlaceTempleGallery>{place.gallery.map(PlaceImages)}</PlaceTempleGallery>
+        </PlaceTempleteContent>
+      </PlaceTempleteContainer>
+    </Fragment>
   );
 };

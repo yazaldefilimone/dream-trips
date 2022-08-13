@@ -1,8 +1,8 @@
 import { InfoOutline } from '@styled-icons/evaicons-outline';
 import dynamic from 'next/dynamic';
 import { Fragment, FunctionComponent } from 'react';
-import { Place } from '~/presentation/components/contracts';
-import { LinkApp } from '~/presentation/components/LinkApp';
+import { Place } from '~/domain/entities';
+import { LinkApp } from '~/presentation/components';
 
 const Map = dynamic(() => import('~/presentation/components/Map'), { ssr: false });
 
