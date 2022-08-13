@@ -5,10 +5,11 @@ import { LatLngExpression } from 'leaflet';
 import { MapContracts, Place } from '~/presentation/components/contracts';
 
 const Map: FunctionComponent<MapContracts> = ({ places }) => {
-  const position: LatLngExpression = [51.505, -0.09];
+  const position: LatLngExpression = [0, 0];
 
   function PlaceMap(place: Place) {
-    return <Marker key={`place-${place.id}`} title={place.name} position={place.location}></Marker>;
+    const { latitude, longitude } = place.location;
+    return <Marker key={`place-${place.id}`} title={place.name} position={[latitude, longitude]}></Marker>;
   }
 
   return (
