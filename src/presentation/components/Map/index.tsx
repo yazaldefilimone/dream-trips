@@ -8,7 +8,7 @@ const Map: FunctionComponent<MapContracts> = ({ places }) => {
   const position: LatLngExpression = [51.505, -0.09];
 
   function PlaceMap(place: Place) {
-    return <Marker title={place.name} position={place.location}></Marker>;
+    return <Marker key={`place-${place.id}`} title={place.name} position={place.location}></Marker>;
   }
 
   return (
