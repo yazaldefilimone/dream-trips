@@ -9,10 +9,12 @@ import { placeQuery } from './query';
 export class RemoteGetPlaces implements IRemoteGetPlaces {
   async query(): IRemoteGetPlaces.output {
     try {
-      const { places } = await client.request<{ places: Place[] }>(placeQuery, { first: 3 });
+      const { places } = await client.request<{ places: Place[] }>(placeQuery);
+
       return right(places);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
-      console.log({ message: error.message, response: error.response.headers });
+      console.log({ message: error.message });
       return left(new InternalServerError());
     }
   }
