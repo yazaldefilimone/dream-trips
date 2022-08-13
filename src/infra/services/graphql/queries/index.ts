@@ -1,1 +1,1 @@
-export * from './getPagesQuery';
+export * from './remote-get-pages';
