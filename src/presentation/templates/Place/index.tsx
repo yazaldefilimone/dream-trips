@@ -2,6 +2,7 @@ import { CloseOutline } from '@styled-icons/evaicons-outline';
 import { Fragment, FunctionComponent } from 'react';
 import { Gallery, Place } from '~/domain/entities';
 import { LinkApp } from '~/presentation/components';
+import Image from 'next/image';
 import {
   PlaceTempleteContainer,
   PlaceTempleteContent,
@@ -15,7 +16,7 @@ type PlaceTempleteProps = {
 };
 export const PlaceTemple: FunctionComponent<PlaceTempleteProps> = ({ place }) => {
   function PlaceImages(gallery: Gallery) {
-    return <img key={`place-${place.id}`} src={gallery.url} alt={place.name} />;
+    return <Image key={`place-${place.id}`} src={gallery.url} width={500} height={400} alt={place.name} />;
   }
   return (
     <Fragment>
