@@ -1,7 +1,7 @@
 import { gql } from 'graphql-request';
 
 export const placeQuery = gql`
-  query getPlace {
+  query GetPlace {
     places {
       id
       slug
