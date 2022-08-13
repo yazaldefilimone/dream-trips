@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import { LinkApp } from '~/presentation/components/LinkApp';
+import { LinkApp } from '~/presentation/components';
 import { PageTempleteBody, PageTempleteContainer, PageTempleteHeading } from './styles';
 
 import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline';

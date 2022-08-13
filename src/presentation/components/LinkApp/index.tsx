@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import * as Styled from './styles';
 import Link from 'next/link';
-import { LinkAppContracts } from '~/presentation/components/contracts';
+import { LinkAppContracts } from '~/presentation/components';
 
 export const LinkApp: FunctionComponent<LinkAppContracts> = ({ href, children }) => {
   return (

@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 
 import { MapContainer, Marker, TileLayer } from 'react-leaflet';
 import { LatLngExpression } from 'leaflet';
-import { MapContracts, Place } from '~/presentation/components/contracts';
+import { MapContracts, Place } from '~/presentation/components';
 import { useRouter } from 'next/router';
 
 const Map: FunctionComponent<MapContracts> = ({ places }) => {
